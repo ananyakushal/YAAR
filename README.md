@@ -1,4 +1,5 @@
-# YAAR
+# YAAR 
+
 
 
 We are creating a budgeting app primarily for students, with a task-based feature to manage daily tasks in addition to finances. Expenses will be categorized by type, such as food, education, and transportation. Users can set a budget for each category, and monitor spending to ensure they stay within budget.
@@ -24,3 +25,10 @@ Features:
       For example, a user has decided to spend a total of Rs. 2000 on food expenses for the month. However, if they fail to complete an urgent task, they can choose to deduct a pre-           determined amount from their budget. As a result, they will be able to spend less than Rs. 2000 on food expenses for that month.
     - Dark and light mode.
     - User accounts: Users can create accounts and log in securely to access their task and money management data from multiple devices.
+
+
+# Maintained By:
+- [Yashasvi Saxena](https://github.com/yashasvisxena) 
+- [Ananya Kushal](https://github.com/ananyakushal) 
+- [Aryan Panwar](https://github.com/chaudharyaryanpanwar) 
+- [Ravi Yadav](https://github.com/TheXro) 
