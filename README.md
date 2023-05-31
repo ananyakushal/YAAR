@@ -20,7 +20,7 @@ Features:
     - Task comments and attachments: Users can add comments, attach files, or leave notes on specific tasks.
 - Additional features:
     - Reward system for staying under budget or completing tasks.
+    - Users can choose whether they want to be penalized for an incomplete task marked as urgent before its due date. If they fail to complete such a task, a certain amount will be           deducted from their fixed budget and shown as "over budget" if they try to spend more than their allotted amount.
+      For example, a user has decided to spend a total of Rs. 2000 on food expenses for the month. However, if they fail to complete an urgent task, they can choose to deduct a pre-           determined amount from their budget. As a result, they will be able to spend less than Rs. 2000 on food expenses for that month.
     - Dark and light mode.
     - User accounts: Users can create accounts and log in securely to access their task and money management data from multiple devices.
-
-Possible names for the app include Money-Minded, TimeWallet, and TimeWiseFin. The font used will be Mali.
