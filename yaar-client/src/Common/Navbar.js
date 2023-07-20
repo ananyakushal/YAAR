@@ -4,7 +4,7 @@ import Darklight from "../ui-mode/darklight";
 
 function Navbar() {
   return (
-    <div className="Navbar flex justify-between items-center p-0 m-0 mb-1">
+    <div className="Navbar flex justify-between items-center p-0 m-0 mb-1 ">
       <div className="Logo flex justify-between items-center p-1 mt-2 ml-3 text-xl space-x-2 sm:ml-12 sm:space-x-5 sm:text-3xl">
         <img className="img h-12 mr-2 sm:h-16" src={logo} alt="logo" />
         Money Minded
