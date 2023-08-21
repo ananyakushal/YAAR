@@ -1,6 +1,5 @@
-
 import Navbar from "../Common/Navbar";
-import Dashboard from "../Dashboard/Dashboard";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 function App() {
   return (
