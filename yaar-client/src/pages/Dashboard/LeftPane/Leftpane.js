@@ -1,20 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import Hamburger from '../Hamburger'
+import React from "react";
+import Hamburger from "../Hamburger";
 import { useState } from "react";
-import Rightstats from '../RightPane/Rightstats';
+import Sidebar from "../../../Common/Sidebar";
+import profile from "../../../Common/1688118865701.jpeg"
+
 function Leftpane() {
-  const [view,toView]=useState(false);
+  const [view, toView] = useState(false);
   return (
     <div className="Left md:w-3/12 flex md:bg-[--body_paper] md:shadow-2xl md:rounded-lg flex-grow justify-start items-center flex-col ">
-      <button onClick={()=>toView(!view)}><Hamburger/></button>
+      <button onClick={() => toView(!view)}>
+        <Hamburger />
+      </button>
       {view ? (
-        <Rightstats className="Rightstats flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start align-centre z-1 text-left " />
+        <Sidebar name="Yashasvi" img={profile} className="flex flex-col items-center justify-start w-full h-full bg-[--body_background] text-[--text_primary] p-1 pl-3 pr-3" />
       ) : (
-        <Rightstats className="Rightstats hidden md:flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start" />
+        <Sidebar name="Yashasvi" img={profile} className="hidden md:flex items-center justify-start flex-col w-full h-full bg-[--body_paper] text-[--text_primary] p-1 pl-3 pr-3" />
       )}
     </div>
-  )
+  );
 }
 
-export default Leftpane
+export default Leftpane;
