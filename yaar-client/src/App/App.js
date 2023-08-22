@@ -6,6 +6,7 @@ function App() {
     <div className="App overflow-hidden">
       <Navbar />
       <Dashboard />
+      <preLoader />
       {/* <Footer/> */}
     </div>
   );
