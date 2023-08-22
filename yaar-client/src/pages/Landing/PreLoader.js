@@ -1,16 +1,21 @@
-import React from 'react'
-import './preLoader.css'
+import React, { useEffect } from 'react'
+import './PreLoader.css'
+import { preLoaderAnim } from '../../animations'
 
-const preLoader = () => {
+const PreLoader = () => {
+
+    useEffect(() => {
+        preLoaderAnim()
+    }, [])
   return (
-    <div className='preLoader'>
-        <div className="text-container">
-        <span> Think, </span>
-        <span> Save,</span>
-        <span> Spend, </span>
-    </div>
+    <div className="preLoader">
+      <div className="text-container">
+        <span><b>Think,</b></span>
+        <span><b>Save,</b></span>
+        <span><b>Spend</b></span>
+      </div>
     </div>
   )
 }
 
-export default preLoader
+export default PreLoader
