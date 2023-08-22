@@ -1,0 +1,19 @@
+.menu li {
+  padding: 7px;
+  cursor: pointer;
+  color: var(--text_primary);
+  border-radius: 0.375em;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color:var(--text_secondary);
+  color: var(--body_background);
+  border: 4px;
+  border-color:  var(--body_background);
+}
+
+.menu .selected {
+  background-color: var(--text_primary);
+  color: var(--body_background);
+}
