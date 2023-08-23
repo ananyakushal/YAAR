@@ -18,10 +18,10 @@ const Sidebar = (props) => {
       <ul className="menu cursor-pointer list-none w-full m-3 text-sm md:text-base">
         {/* <h1 className='p-[10px] text-lg w-full md:mb-2 text-center md:text-3xl'>Finance</h1> */}
         <li
-          className={selectedItem === 'Record' ? 'selected' : ''}
-          onClick={() => handleItemClick('Record')}
+          className={selectedItem === 'FinanceRecord' ? 'selected' : ''}
+          onClick={() => handleItemClick('FinanceRecord')}
         >
-          Record
+          Finance Record
         </li>
         <li
           className={selectedItem === 'Budget' ? 'selected' : ''}
@@ -30,12 +30,36 @@ const Sidebar = (props) => {
           Budget
         </li>
         <li
+          className={selectedItem === 'Categories' ? 'selected' : ''}
+          onClick={() => handleItemClick('Categories')}
+        >
+          Categories
+        </li>
+        <li
           className={selectedItem === 'Analysis' ? 'selected' : ''}
           onClick={() => handleItemClick('Analysis')}
         >
           Analysis
         </li>
         <hr className="m-3" />
+        <li
+          className={selectedItem === 'TaskRecord' ? 'selected' : ''}
+          onClick={() => handleItemClick('TaskRecord')}
+        >
+          Task Record
+        </li>
+        <li
+          className={selectedItem === 'Labels' ? 'selected' : ''}
+          onClick={() => handleItemClick('Labels')}
+        >
+          Labels
+        </li>
+        <li
+          className={selectedItem === 'Progress' ? 'selected' : ''}
+          onClick={() => handleItemClick('Progress')}
+        >
+          Progress
+        </li>
       </ul>
     </div>
   );
