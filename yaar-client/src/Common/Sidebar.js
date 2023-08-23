@@ -60,6 +60,13 @@ const Sidebar = (props) => {
         >
           Progress
         </li>
+        <hr className="m-3" />
+        <li
+          className={selectedItem === 'About' ? 'selected' : ''}
+          onClick={() => handleItemClick('About')}
+        >
+          About Us
+        </li>
       </ul>
     </div>
   );
