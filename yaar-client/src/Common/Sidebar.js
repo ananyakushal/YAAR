@@ -4,10 +4,6 @@ import "./Sidebar.css"; // Import your CSS file for styling
 const Sidebar = (props) => {
   const [selectedItem, setSelectedItem] = useState('Record'); // Initial selected item
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-  };
-
   return (
     <div className={props.className}>
       <div className="profile-picture m-2 flex flex-row justify-center item-start text-sm md:text-lg">
@@ -19,51 +15,51 @@ const Sidebar = (props) => {
         {/* <h1 className='p-[10px] text-lg w-full md:mb-2 text-center md:text-3xl'>Finance</h1> */}
         <li
           className={selectedItem === 'FinanceRecord' ? 'selected' : ''}
-          onClick={() => handleItemClick('FinanceRecord')}
+          onClick={() => setSelectedItem('FinanceRecord')}
         >
           Finance Record
         </li>
         <li
           className={selectedItem === 'Budget' ? 'selected' : ''}
-          onClick={() => handleItemClick('Budget')}
+          onClick={() => setSelectedItem('Budget')}
         >
           Budget
         </li>
         <li
           className={selectedItem === 'Categories' ? 'selected' : ''}
-          onClick={() => handleItemClick('Categories')}
+          onClick={() => setSelectedItem('Categories')}
         >
           Categories
         </li>
         <li
           className={selectedItem === 'Analysis' ? 'selected' : ''}
-          onClick={() => handleItemClick('Analysis')}
+          onClick={() => setSelectedItem('Analysis')}
         >
           Analysis
         </li>
         <hr className="m-3" />
         <li
           className={selectedItem === 'TaskRecord' ? 'selected' : ''}
-          onClick={() => handleItemClick('TaskRecord')}
+          onClick={() => setSelectedItem('TaskRecord')}
         >
           Task Record
         </li>
         <li
           className={selectedItem === 'Labels' ? 'selected' : ''}
-          onClick={() => handleItemClick('Labels')}
+          onClick={() => setSelectedItem('Labels')}
         >
           Labels
         </li>
         <li
           className={selectedItem === 'Progress' ? 'selected' : ''}
-          onClick={() => handleItemClick('Progress')}
+          onClick={() => setSelectedItem('Progress')}
         >
           Progress
         </li>
         <hr className="m-3" />
         <li
           className={selectedItem === 'About' ? 'selected' : ''}
-          onClick={() => handleItemClick('About')}
+          onClick={() => setSelectedItem('About')}
         >
           About Us
         </li>
