@@ -32,8 +32,8 @@ const Sidebar = (props) => {
           Categories
         </li>
         <li
-          className={selectedItem === 'Analysis' ? 'selected' : ''}
           onClick={() => setSelectedItem('Analysis')}
+          className={selectedItem === 'Analysis' ? 'selected' : ''}
         >
           Analysis
         </li>
