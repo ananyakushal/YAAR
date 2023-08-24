@@ -6,7 +6,7 @@ import Details from './Details';
 
 const useStyles = makeStyles((theme) => ({
   fab: {
-    position: 'absolute',
+    position: 'relative',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
