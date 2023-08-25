@@ -1,8 +1,11 @@
 import React from "react";
-
+import { useState } from "react";
+import Delete from "./Delete";
 function Entry(props) {
+  const [hovered,showDelete]=useState(false);
   return (
-    <div className="Entry bg-[--body_background] flex m-3 mb-1 mt-1 flex-row w-full rounded-lg">
+    <div onClick={()=>showDelete(!hovered)} className="Entry cursor-pointer bg-[--body_background] flex m-3 mb-1 mt-1 flex-row w-full rounded-lg">
+      {hovered && <Delete/>}
       <img
         className="category h-8 m-2 sm:h-12 self-start"
         src={props.category}
