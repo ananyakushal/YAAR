@@ -21,9 +21,7 @@ function MainArea() {
         <Route path="Labels" element={<Labels/>} />
         <Route path="/Progress" element={<Progress/>} />
       </Routes>
-      <div className="flex items-end justify-end w-full fixed mr-12 mb-2 right-80 bottom-2 z-[1000]">
         <FloatingButton />
-      </div>
     </div>
   );
 }
