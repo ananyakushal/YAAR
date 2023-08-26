@@ -24,10 +24,10 @@ function Entry(props) {
           </div>
         </div>
         <div className="Amt-time flex flex-row justify-center items-center mr-1">
-          <div className="Amt text-lg md:text-3xl self-center mr-3 md:mr-6" style={{color : props.color}}>{props.amount}</div>
+          <div className="Amt text-lg md:text-3xl self-center mr-3 md:mr-6 text-center" style={{color : props.color}}>{props.amount}</div>
           <div className="Date-time text-xs md:text-sm">
-            <p className="Date">{props.date}</p>
-            <p className="Time">{props.time}</p>
+            <p className="text-center Date">{props.date}</p>
+            <p className="Time text-center">{props.time}</p>
           </div>
         </div>
       </div>

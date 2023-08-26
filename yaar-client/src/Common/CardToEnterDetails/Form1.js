@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 // Form1.jsx
 import React, { useState } from "react";
 
@@ -5,10 +6,30 @@ import { addExpense } from "../../Api/ExpensesApi.js";
 
 import "./Card.css";
 const Form1 = () => {
+  let dateValue = new Date();
+  let day = dateValue.getDate();
+  let month = dateValue.getMonth() + 1;
+  let year = dateValue.getFullYear();
+  let minute = dateValue.getMinutes();
+  let hour = dateValue.getHours();
+
+  {
+    day < 10 && (day = "0" + day);
+  }
+  {
+    month < 10 && (month = "0" + month);
+  }
+  {
+    minute < 10 && (minute = "0" + minute);
+  }
+  {
+    hour < 10 && (hour = "0" + hour);
+  }
+
   const [transactionType, setTransactionType] = useState("expense");
   const [amount, setAmount] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [date, setDate] = useState(year+ "-" + month + "-" + day);
+  const [time, setTime] = useState(hour + ":" + minute);
   const [category, setCategory] = useState("");
 
   const handleTransactionTypeChange = (event) => {
@@ -122,7 +143,10 @@ const Form1 = () => {
         </select>
       </div>
 
-      <button type="submit" className="submitButton text-center p-2 m-2 bg-green-500 rounded-xl">
+      <button
+        type="submit"
+        className="submitButton text-center p-2 m-2 bg-green-500 rounded-xl"
+      >
         Submit
       </button>
     </form>
