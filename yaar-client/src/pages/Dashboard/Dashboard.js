@@ -3,6 +3,7 @@ import MainArea from './MainArea/MainArea'
 import Leftpane from './LeftPane/Leftpane'
 import Rightpane from './RightPane/Rightpane'
 import Navbar from '../../Common/Navbar'
+import FloatingButton from '../../Common/CardToEnterDetails/FloatingButton'
 function Dashboard() {
   return (
     <>
@@ -13,6 +14,7 @@ function Dashboard() {
         <Leftpane/>
         <MainArea/>
         <Rightpane/>
+        <FloatingButton/>
       </div>
     </div>
     </>
