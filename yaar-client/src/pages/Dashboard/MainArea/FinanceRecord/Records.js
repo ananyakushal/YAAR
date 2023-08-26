@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { sortedExpenses } from '../../../../Api/ExpensesApi';
 import Entry from './Entry'
-import cutlery from "./cutlery.png";
+import Food from "./cutlery.png";
 import creditcard from "./creditcard.png";
 import { deleteEntry } from '../../../../Api/ExpensesApi';
 function Records() {
@@ -32,6 +32,10 @@ function Records() {
   };
   // setEntryList(entryList);
 
+ 
+  
+  
+
 
   return (
     <div className='Records flex pb-2 mb-2 flex-col-reverse items-center justify-end w-full h-full overflow-y-scroll overflow-x-hidden z-0'>
@@ -39,7 +43,7 @@ function Records() {
       {entryList.map(entry => (
         <Entry
           key={entry._id}
-          category={cutlery}
+          category={entry.category}
           catText={entry.category}
           color={entry.type === "income"? "rgb(34 197 94)" : "rgb(255 0 0)" }
           payment={creditcard}
