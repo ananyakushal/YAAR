@@ -6,10 +6,12 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import Text1 from './Text1';
 import Text2 from './Text2';
+import PreLoader from './PreLoader';
 
 function Landing({ styles}) { 
   return (
     <>
+    <PreLoader/>
     {/* <styles/> */}
     <Navbar/>
     <Text1/>
