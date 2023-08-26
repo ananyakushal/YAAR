@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Records from "./FinanceRecord/Records";
-import FloatingButton from "../../../Common/CardToEnterDetails/FloatingButton";
 import Analysis from "./Analysis/Analysis";
 import Budget from "./Budget/Budget";
 import Categories from "./Categories/Categories";
@@ -17,11 +16,10 @@ function MainArea() {
         <Route path="/Budget" element={<Budget />} />
         <Route path="/Categories" element={<Categories />} />
         <Route path="/Analysis" element={<Analysis />} />
-        <Route path="/TaskRecord" element={<TaskRecord/>} />
-        <Route path="Labels" element={<Labels/>} />
-        <Route path="/Progress" element={<Progress/>} />
+        <Route path="/TaskRecord" element={<TaskRecord />} />
+        <Route path="Labels" element={<Labels />} />
+        <Route path="/Progress" element={<Progress />} />
       </Routes>
-        <FloatingButton />
     </div>
   );
 }

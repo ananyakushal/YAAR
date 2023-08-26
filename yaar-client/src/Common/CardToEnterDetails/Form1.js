@@ -1,7 +1,7 @@
 // Form1.jsx
 import React, { useState } from "react";
 
-import { addExpense } from '../../Api/ExpensesApi.js';
+import { addExpense } from "../../Api/ExpensesApi.js";
 
 import "./Card.css";
 const Form1 = () => {
@@ -38,7 +38,7 @@ const Form1 = () => {
       amount: parseFloat(amount),
       date,
       time,
-      category
+      category,
     };
 
     try {
@@ -53,86 +53,79 @@ const Form1 = () => {
     }
   };
 
-
-
   return (
-      <form onSubmit={handleSubmit}>
-        <div className="radio-inputs">
-          <label className="radio">
-            <input
-              type="radio"
-              value="expense"
-              checked={transactionType === "expense"}
-              onChange={handleTransactionTypeChange}
-            />
-            <span className="name">Expense</span>
-          </label>
-          <label className="radio">
-            <input
-              type="radio"
-              value="income"
-              checked={transactionType === "income"}
-              onChange={handleTransactionTypeChange}
-            />
-            <span className="name">Income</span>
-          </label>
-        </div>
-        <div className="textInputWrapper">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col justify-center items-center"
+    >
+      <div className="radio-inputs">
+        <label className="radio">
           <input
-            type="text"
-            value={amount}
-            onChange={handleAmountChange}
-            placeholder="Amount"
-            className="textInput"
+            type="radio"
+            value="expense"
+            checked={transactionType === "expense"}
+            onChange={handleTransactionTypeChange}
           />
-        </div>
-        <div className="textInputWrapper">
-          <label>
-            <input
-              type="date"
-              value={date}
-              onChange={handleDateChange}
-              placeholder="Date"
-              className="textInput"
-            />
-          </label>
-        </div>
-        <div className="textInputWrapper">
-          <label>
-            <input
-              type="time"
-              value={time}
-              placeholder="Time"
-              onChange={handleTimeChange}
-              className="textInput"
-            />
-          </label>
-        </div>
-        <div className="textInputWrapper">
-          <label>
-            <select
-              placeholder="Category"
-              value={category}
-              onChange={handleCategoryChange}
-              className="textInput"
-            >
-              <option value="">Select a category</option>
-              <option value="food">Food</option>
-              <option value="groceries">Groceries</option>
-              <option value="clothing">Clothing</option>
-              <option value="medical">Medical</option>
-              <option value="party">Party</option>
-              <option value="transportation">Transportation</option>
-            </select>
-          </label>
-        </div>
-        <div className="submitButtonWrapper btn rounded-xl h-8 w-16 text-sm p-1 m-2 sm:text-lg uppercase sm:h-10 sm:w-20 bg-green-500 hover:bg-green-600 mx-auto">
-        <button type="submit" className="submitButton">
-          Submit
-        </button>
+          <span className="name">Expense</span>
+        </label>
+        <label className="radio">
+          <input
+            type="radio"
+            value="income"
+            checked={transactionType === "income"}
+            onChange={handleTransactionTypeChange}
+          />
+          <span className="name">Income</span>
+        </label>
       </div>
-      </form>
+      <div className="textInputWrapper">
+        <input
+          type="text"
+          value={amount}
+          onChange={handleAmountChange}
+          placeholder="Amount"
+          className="textInput"
+        />
+      </div>
+      <div className="textInputWrapper">
+        <input
+          type="date"
+          value={date}
+          onChange={handleDateChange}
+          placeholder="Date"
+          className="textInput"
+        />
+      </div>
+      <div className="textInputWrapper">
+        <input
+          type="time"
+          value={time}
+          placeholder="Time"
+          onChange={handleTimeChange}
+          className="textInput"
+        />
+      </div>
+      <div className="textInputWrapper">
+        <select
+          placeholder="Category"
+          value={category}
+          onChange={handleCategoryChange}
+          className="textInput"
+        >
+          <option value="">Select a category</option>
+          <option value="food">Food</option>
+          <option value="groceries">Groceries</option>
+          <option value="clothing">Clothing</option>
+          <option value="medical">Medical</option>
+          <option value="party">Party</option>
+          <option value="transportation">Transportation</option>
+        </select>
+      </div>
 
+      <button type="submit" className="submitButton text-center p-2 m-2 bg-green-500 rounded-xl">
+        Submit
+      </button>
+    </form>
   );
 };
 

@@ -7,7 +7,7 @@ const FloatingButton = () => {
   const [showCard, setShowCard] = useState(false);
 
   return (
-    <div className="absolute mt-[70vh] ml-[55vw] md:mt-[67vh] md:ml-[43vw] z-[10000]">
+    <div className="fixed m-7 bottom-0 right-4 z-[10000]">
     <Fab color="secondary" onClick={()=>setShowCard(!showCard)}>
       <AddIcon />
     </Fab>
