@@ -62,12 +62,25 @@ const deleteExpense = async (req, res) => {
     }
 }
 
+// Get sorted expenses
+
+const sortedExpenses = async (req, res) => {
+    try {
+        const expenses = await Expense.find({}).sort({date: 1, time: 1});
+        res.status(200).json({ expenses });
+    } catch (error) {
+        res.status(500).json({ msg: error.message });
+    }
+}
+
+
 
 module.exports = {
     getAllExpenses,
     getOneExpense,
     createExpense,
     updateExpense,
+    sortedExpenses,
     deleteExpense
 }
 

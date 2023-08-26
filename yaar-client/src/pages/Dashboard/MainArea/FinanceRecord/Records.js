@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getExpenses } from '../../../../Api/ExpensesApi';
+import { sortedExpenses } from '../../../../Api/ExpensesApi';
 import Entry from './Entry'
 import cutlery from "./cutlery.png";
 import creditcard from "./creditcard.png";
@@ -15,7 +15,7 @@ function Records() {
 
  const fetchEntryList = async () => {
     try {
-        const response  = await getExpenses();
+        const response  = await sortedExpenses();
         setEntryList(response.expenses);
     } catch (error) {
         console.log("Error in fetchEntryList:", error);
