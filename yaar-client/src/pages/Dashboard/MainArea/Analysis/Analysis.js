@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Graph from './Graph';
 function Analysis() {
   return (
-    <div className='text-5xl'>Feature Coming Soon</div>
+    <div>
+      <Graph />
+    </div>
   )
 }
 

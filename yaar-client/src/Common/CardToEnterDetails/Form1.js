@@ -1,5 +1,8 @@
 // Form1.jsx
 import React, { useState } from "react";
+
+import { addExpense } from '../../Api/ExpensesApi.js';
+
 import "./Card.css";
 const Form1 = () => {
   const [transactionType, setTransactionType] = useState("expense");
@@ -28,79 +31,106 @@ const Form1 = () => {
     setCategory(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Process the form data or make API calls here
+    const transactionData = {
+      type: transactionType,
+      amount: parseFloat(amount),
+      date,
+      time,
+      category
+    };
+
+    try {
+      await addExpense(transactionData);
+      setAmount("");
+      setDate("");
+      setTime("");
+      setCategory("");
+      window.location.reload();
+    } catch (error) {
+      console.error("Error adding transaction:", error);
+    }
   };
+
+
+
   return (
       <form onSubmit={handleSubmit}>
-        <div class="radio-inputs">
-          <label class="radio">
+        <div className="radio-inputs">
+          <label className="radio">
             <input
               type="radio"
               value="expense"
               checked={transactionType === "expense"}
               onChange={handleTransactionTypeChange}
             />
-            <span class="name">Expense</span>
+            <span className="name">Expense</span>
           </label>
-          <label class="radio">
+          <label className="radio">
             <input
               type="radio"
               value="income"
               checked={transactionType === "income"}
               onChange={handleTransactionTypeChange}
             />
-            <span class="name">Income</span>
+            <span className="name">Income</span>
           </label>
         </div>
-        <div class="textInputWrapper">
+        <div className="textInputWrapper">
           <input
             type="text"
             value={amount}
             onChange={handleAmountChange}
             placeholder="Amount"
-            class="textInput"
+            className="textInput"
           />
         </div>
-        <div class="textInputWrapper">
+        <div className="textInputWrapper">
           <label>
             <input
               type="date"
               value={date}
               onChange={handleDateChange}
               placeholder="Date"
-              class="textInput"
+              className="textInput"
             />
           </label>
         </div>
-        <div class="textInputWrapper">
+        <div className="textInputWrapper">
           <label>
             <input
               type="time"
               value={time}
               placeholder="Time"
               onChange={handleTimeChange}
-              class="textInput"
+              className="textInput"
             />
           </label>
         </div>
-        <div class="textInputWrapper">
+        <div className="textInputWrapper">
           <label>
             <select
               placeholder="Category"
               value={category}
               onChange={handleCategoryChange}
-              class="textInput"
+              className="textInput"
             >
               <option value="">Select a category</option>
               <option value="food">Food</option>
               <option value="groceries">Groceries</option>
-              <option value="entertainment">Entertainment</option>
-              {/* Add more options as needed */}
+              <option value="clothing">Clothing</option>
+              <option value="medical">Medical</option>
+              <option value="party">Party</option>
+              <option value="transportation">Transportation</option>
             </select>
           </label>
         </div>
+        <div className="submitButtonWrapper btn rounded-xl h-8 w-16 text-sm p-1 m-2 sm:text-lg uppercase sm:h-10 sm:w-20 bg-green-500 hover:bg-green-600 mx-auto">
+        <button type="submit" className="submitButton">
+          Submit
+        </button>
+      </div>
       </form>
 
   );
