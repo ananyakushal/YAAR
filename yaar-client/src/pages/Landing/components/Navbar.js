@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { close, logo, menu } from "./assets/index";
+import { close, logo, menu } from "../assets/index";
 import { navLinks } from "./icons";
 import Login from "./Login";
 

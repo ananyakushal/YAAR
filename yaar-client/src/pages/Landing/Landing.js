@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 // import Dashboard from '../Dashboard/Dashboard';
-import styles from './style';
+import styles from './components/style';
 import './Landing.css'
-import Footer from './Footer';
-import Navbar from './Navbar';
-import Text1 from './Text1';
-import Text2 from './Text2';
-import PreLoader from './PreLoader';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Text1 from './components/Text1';
+import Text2 from './components/Text2';
+import PreLoader from './components/PreLoader';
 
 function Landing({ styles}) { 
   return (

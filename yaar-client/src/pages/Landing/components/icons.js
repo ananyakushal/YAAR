@@ -1,5 +1,5 @@
 // import "./Landing/index.css";
-import { facebook, instagram, linkedin, twitter, send, shield, star  } from "./assets";
+import { facebook, instagram, linkedin, twitter, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
