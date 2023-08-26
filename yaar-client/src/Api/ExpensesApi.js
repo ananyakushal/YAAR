@@ -31,3 +31,13 @@ export const deleteEntry = async (expenseId) => {
         throw error;
     }
 }
+
+export const sortedExpenses = async () => {
+    try {
+        const response = await axios.get(`${BaseUrl}/expenses/sort`);
+        return response.data;
+    } catch (error) {
+        console.log("Error in sortedExpenses:", error); 
+        throw error;
+    }
+}
