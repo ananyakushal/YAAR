@@ -49,8 +49,11 @@ body {
   outline: 1px solid var(--body_background);
 }
 
+*::-webkit-calendar-picker-indicator {
+  filter: invert(1); 
 
-
-* {
-  scroll-behavior: smooth;
+}
+*::-webkit-calendar-picker-indicator {
+ 
+  filter: invert(1); 
 }
