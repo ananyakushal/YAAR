@@ -1,14 +1,32 @@
 import React from "react";
 import { useState } from "react";
 import Delete from "./Delete";
+import Food from "./cutlery.png";
+import Medical from "./medical.png";
+import Transportation from "./transportation.png";
+import Clothing from "./clothing.png";
+import Groceries from "./grocery.png";
+import Party from "./party.png";
 function Entry(props) {
   const [hovered,showDelete]=useState(false);
+  const categoryToImage = {
+    Food: Food,
+    medical: Medical,
+    party: Party,
+    transportation: Transportation,
+    clothing: Clothing,
+    groceries: Groceries,
+    // Add more categories and image URLs here
+  };
+
+  const categoryImage = categoryToImage[props.category];
+
   return (
     <div onClick={()=>showDelete(!hovered)} className="Entry cursor-pointer bg-[--body_background] flex m-3 mb-1 mt-1 flex-row w-full rounded-lg">
       {hovered && <Delete onDelete={props.onDelete} />}
       <img
         className="category h-8 m-2 sm:h-12 self-start"
-        src={props.category}
+        src={categoryImage}
         alt={props.catText}
       />
       <div className="Details flex flex-row ml-1 mr-1 pt-1 h-full w-full justify-between">
