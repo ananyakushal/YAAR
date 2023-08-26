@@ -32,6 +32,7 @@ const Graph = () => {
         }, []);
         console.log(expenses);
         
+        
     
             
 

@@ -22,7 +22,7 @@ export const getExpenses = async () => {
     }
 };
 
-export const deleteExpense = async (expenseId) => {
+export const deleteEntry = async (expenseId) => {
     try {
         const response = await axios.delete(`${BaseUrl}/expenses/${expenseId}`);
         return response.data;
