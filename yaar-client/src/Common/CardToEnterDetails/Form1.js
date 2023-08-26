@@ -134,12 +134,12 @@ const Form1 = () => {
           className="textInput"
         >
           <option value="">Select a category</option>
-          <option value="food">Food</option>
-          <option value="groceries">Groceries</option>
-          <option value="clothing">Clothing</option>
-          <option value="medical">Medical</option>
-          <option value="party">Party</option>
-          <option value="transportation">Transportation</option>
+          <option value="Food">Food</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Medical">Medical</option>
+          <option value="Party">Party</option>
+          <option value="Transportation">Transportation</option>
         </select>
       </div>
 
