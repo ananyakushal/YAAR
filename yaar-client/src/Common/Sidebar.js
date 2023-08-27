@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sidebar.css"; // Import your CSS file for styling
 import { NavLink } from "react-router-dom";
 const Sidebar = (props) => {
-  const [selectedItem, setSelectedItem] = useState("Record"); // Initial selected item
+
 
   return (
     <div className={props.className}>
@@ -17,67 +17,31 @@ const Sidebar = (props) => {
       </div>
       <ul className="menu cursor-pointer list-none w-full m-3 text-sm md:text-base">
         <NavLink to="/">
-          <li
-            className={selectedItem === "FinanceRecord" ? "selected" : ""}
-            onClick={() => setSelectedItem("FinanceRecord")}
-          >
-            Finance Record
-          </li>
+          <li>Finance Record</li>
         </NavLink>
         <NavLink to="/Budget">
-          <li
-            className={selectedItem === "Budget" ? "selected" : ""}
-            onClick={() => setSelectedItem("Budget")}
-          >
-            Budget
-          </li>
+          <li>Budget</li>
         </NavLink>
         <NavLink to="/Categories">
-          <li
-            className={selectedItem === "Categories" ? "selected" : ""}
-            onClick={() => setSelectedItem("Categories")}
-          >
-            Categories
-          </li>
+          <li>Categories</li>
         </NavLink>
         <NavLink to="/Analysis">
-          <li
-            onClick={() => setSelectedItem("Analysis")}
-            className={selectedItem === "Analysis" ? "selected" : ""}
-          >
-            Analysis
-          </li>
+          <li>Analysis</li>
         </NavLink>
         <hr className="m-3" />
         <NavLink to="/TaskRecord">
-          <li
-            className={selectedItem === "TaskRecord" ? "selected" : ""}
-            onClick={() => setSelectedItem("TaskRecord")}
-          >
-            Task Record
-          </li>
+          <li>Task Record</li>
         </NavLink>
         <NavLink to="/Labels">
-          <li
-            className={selectedItem === "Labels" ? "selected" : ""}
-            onClick={() => setSelectedItem("Labels")}
-          >
-            Labels
-          </li>
+          <li>Labels</li>
         </NavLink>
         <NavLink to="/Progress">
-          <li
-            className={selectedItem === "Progress" ? "selected" : ""}
-            onClick={() => setSelectedItem("Progress")}
-          >
-            Progress
-          </li>
+          <li>Progress</li>
         </NavLink>
         {/* <hr className="m-3" />
         <NavLink to="/About">
           <li
-            className={selectedItem === "About" ? "selected" : ""}
-            onClick={() => setSelectedItem("About")}
+         
           >
             About Us
           </li>
