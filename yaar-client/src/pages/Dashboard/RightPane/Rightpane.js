@@ -69,7 +69,7 @@ function Rightpane() {
         <Hamburger />
       </button>
       {view ? (
-        <Rightstats className="Rightstats flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start align-centre text-left overflow-x-hidden overflow-y-scroll " totalExpense={TE} />
+        <Rightstats className="Rightstats flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start align-centre text-left overflow-x-hidden overflow-y-scroll " totalExpense={TE} totalIncome={TI} totalBalance={Balance} />
       ) : (
         <Rightstats className="Rightstats overflow-x-hidden md:overflow-y-hidden hidden md:flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start" totalExpense={TE} totalIncome={TI} totalBalance={Balance} />
       )}
