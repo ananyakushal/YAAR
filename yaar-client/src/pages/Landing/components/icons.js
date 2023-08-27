@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import "./Landing/index.css";
 import { facebook, instagram, linkedin, twitter, send, shield, star  } from "../assets";
 
