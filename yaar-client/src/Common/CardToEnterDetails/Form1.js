@@ -13,6 +13,17 @@ const Form1 = () => {
   let minute = dateValue.getMinutes();
   let hour = dateValue.getHours();
 
+  const expenseCategory = [
+    "Food",
+    "Groceries",
+    "Clothing",
+    "Medical",
+    "Party",
+    "Transportation",
+  ];
+  const incomeCategory = ["Salary","Pocket Money","Cashback"];
+
+
   {
     day < 10 && (day = "0" + day);
   }
@@ -26,15 +37,17 @@ const Form1 = () => {
     hour < 10 && (hour = "0" + hour);
   }
 
-  const [transactionType, setTransactionType] = useState("expense");
+  const [transactionType, setTransactionType] = useState("Expense");
   const [amount, setAmount] = useState("");
-  const [date, setDate] = useState(year+ "-" + month + "-" + day);
+  const [date, setDate] = useState(year + "-" + month + "-" + day);
   const [time, setTime] = useState(hour + ":" + minute);
   const [category, setCategory] = useState("");
 
   const handleTransactionTypeChange = (event) => {
     setTransactionType(event.target.value);
   };
+
+  const categoryToShow = (transactionType === "Expense" ? expenseCategory : incomeCategory)
 
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
@@ -84,7 +97,7 @@ const Form1 = () => {
           <input
             type="radio"
             value="Expense"
-            checked={transactionType === "expense"}
+            checked={transactionType === "Expense"}
             onChange={handleTransactionTypeChange}
           />
           <span className="name">Expense</span>
@@ -93,7 +106,7 @@ const Form1 = () => {
           <input
             type="radio"
             value="Income"
-            checked={transactionType === "income"}
+            checked={transactionType === "Income"}
             onChange={handleTransactionTypeChange}
           />
           <span className="name">Income</span>
@@ -134,12 +147,9 @@ const Form1 = () => {
           className="textInput"
         >
           <option value="">Select a category</option>
-          <option value="Food">Food</option>
-          <option value="Groceries">Groceries</option>
-          <option value="Clothing">Clothing</option>
-          <option value="Medical">Medical</option>
-          <option value="Party">Party</option>
-          <option value="Transportation">Transportation</option>
+          {categoryToShow.map((option, index) => (
+          <option key={index} value={option}>{option}</option>
+        ))}
         </select>
       </div>
 

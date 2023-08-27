@@ -35,7 +35,7 @@ function Rightpane() {
     useEffect(() => {
       const totalExpenses = expenses.reduce((total, expense) => {
         // return total + expense.amount;
-        if (expense.type === "expense") {
+        if (expense.type === "Expense") {
           return total + expense.amount;
         }
         return total
@@ -48,7 +48,7 @@ function Rightpane() {
     const [totalIncome, setTotalIncome] = useState(0);
     useEffect(() => {
       const totalIncome = expenses.reduce((total, expense) => {
-        if (expense.type === "income") {
+        if (expense.type === "Income") {
           return total + expense.amount;
         }
         return total;
@@ -69,7 +69,7 @@ function Rightpane() {
         <Hamburger />
       </button>
       {view ? (
-        <Rightstats className="Rightstats flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start align-centre text-left overflow-x-hidden overflow-y-scroll " totalExpense={TE} />
+        <Rightstats className="Rightstats flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start align-centre text-left overflow-x-hidden overflow-y-scroll " totalExpense={TE} totalIncome={TI} totalBalance={Balance} />
       ) : (
         <Rightstats className="Rightstats overflow-x-hidden md:overflow-y-hidden hidden md:flex flex-col h-[95%] w-full text-xs md:text-sm lg:text-base mt-2 mb-4 justify-start" totalExpense={TE} totalIncome={TI} totalBalance={Balance} />
       )}

@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import Delete from "./Delete";
-import Food from "./cutlery.png";
-import Medical from "./medical.png";
-import Transportation from "./transportation.png";
-import Clothing from "./clothing.png";
-import Groceries from "./grocery.png";
-import Party from "./party.png";
+import Food from "../FinanceRecord/categoryIcon/cutlery.png";
+import Medical from "../FinanceRecord/categoryIcon/medical.png";
+import Transportation from "../FinanceRecord/categoryIcon/transportation.png";
+import Clothing from "../FinanceRecord/categoryIcon/clothing.png";
+import Groceries from "../FinanceRecord/categoryIcon/grocery.png";
+import Party from "../FinanceRecord/categoryIcon/party.png";
+import Pocketmoney from "../FinanceRecord/categoryIcon/pocketmoney.png";
+import Cashback from "../FinanceRecord/categoryIcon/cashback.png";
+import Salary from "../FinanceRecord/categoryIcon/salary.png";
 function Entry(props) {
   const [hovered,showDelete]=useState(false);
   const categoryToImage = {
@@ -16,6 +19,9 @@ function Entry(props) {
     Transportation: Transportation,
     Clothing: Clothing,
     Groceries: Groceries,
+    Pocketmoney: Pocketmoney,
+    Cashback: Cashback,
+    Salary: Salary,
     // Add more categories and image URLs here
   };
 
@@ -44,8 +50,8 @@ function Entry(props) {
         <div className="Amt-time flex flex-row justify-center items-center mr-1">
           <div className="Amt text-lg md:text-3xl self-center mr-3 md:mr-6 text-center" style={{color : props.color}}>{props.amount}</div>
           <div className="Date-time text-xs md:text-sm">
-            <p className="text-center Date">{props.date}</p>
-            <p className="Time text-center">{props.time}</p>
+            <p className="text-center Date text-[0.5rem] md:text-sm">{props.date}</p>
+            <p className="Time text-center text-[0.5rem] md:text-sm">{props.time}</p>
           </div>
         </div>
       </div>
