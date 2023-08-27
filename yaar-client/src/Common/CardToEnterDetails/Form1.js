@@ -83,7 +83,7 @@ const Form1 = () => {
         <label className="radio">
           <input
             type="radio"
-            value="expense"
+            value="Expense"
             checked={transactionType === "expense"}
             onChange={handleTransactionTypeChange}
           />
@@ -92,7 +92,7 @@ const Form1 = () => {
         <label className="radio">
           <input
             type="radio"
-            value="income"
+            value="Income"
             checked={transactionType === "income"}
             onChange={handleTransactionTypeChange}
           />
