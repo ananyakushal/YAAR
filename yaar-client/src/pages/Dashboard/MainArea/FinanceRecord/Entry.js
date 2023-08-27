@@ -11,11 +11,11 @@ function Entry(props) {
   const [hovered,showDelete]=useState(false);
   const categoryToImage = {
     Food: Food,
-    medical: Medical,
-    party: Party,
-    transportation: Transportation,
-    clothing: Clothing,
-    groceries: Groceries,
+    Medical: Medical,
+    Party: Party,
+    Transportation: Transportation,
+    Clothing: Clothing,
+    Groceries: Groceries,
     // Add more categories and image URLs here
   };
 
