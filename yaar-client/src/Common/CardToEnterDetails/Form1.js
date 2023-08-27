@@ -26,7 +26,7 @@ const Form1 = () => {
     hour < 10 && (hour = "0" + hour);
   }
 
-  const [transactionType, setTransactionType] = useState("expense");
+  const [transactionType, setTransactionType] = useState("Expense");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState(year+ "-" + month + "-" + day);
   const [time, setTime] = useState(hour + ":" + minute);
@@ -84,7 +84,7 @@ const Form1 = () => {
           <input
             type="radio"
             value="Expense"
-            checked={transactionType === "expense"}
+            checked={transactionType === "Expense"}
             onChange={handleTransactionTypeChange}
           />
           <span className="name">Expense</span>
@@ -93,7 +93,7 @@ const Form1 = () => {
           <input
             type="radio"
             value="Income"
-            checked={transactionType === "income"}
+            checked={transactionType === "Income"}
             onChange={handleTransactionTypeChange}
           />
           <span className="name">Income</span>
