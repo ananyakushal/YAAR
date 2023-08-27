@@ -44,7 +44,7 @@ function Records() {
           key={entry._id}
           category={entry.category}
           catText={entry.category}
-          color={entry.type === "Income"? "rgb(34 197 94)" : "rgb(255 0 0)" }
+          color={entry.type === "Income"? "rgb(34 197 94)" : "rgb(248 113 113)" }
           payment={creditcard}
           mode={entry.type}
           amount={entry.amount}
