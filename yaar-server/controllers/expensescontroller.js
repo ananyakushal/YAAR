@@ -66,7 +66,7 @@ const deleteExpense = async (req, res) => {
 
 const sortedExpenses = async (req, res) => {
     try {
-        const expenses = await Expense.find({}).sort({date: 1, time: 1});
+        const expenses = await Expense.find({}).sort({date: -1, time: -1});
         res.status(200).json({ expenses });
     } catch (error) {
         res.status(500).json({ msg: error.message });
