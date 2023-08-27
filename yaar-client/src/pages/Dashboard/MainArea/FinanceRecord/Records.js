@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { sortedExpenses } from '../../../../Api/ExpensesApi';
-import Entry from './Entry'
-import Food from "./cutlery.png";
-import creditcard from "./creditcard.png";
+import Entry from './Entry';
+import creditcard from "../FinanceRecord/categoryIcon/creditcard.png";
 import { deleteEntry } from '../../../../Api/ExpensesApi';
 function Records() {
 
@@ -45,7 +44,7 @@ function Records() {
           key={entry._id}
           category={entry.category}
           catText={entry.category}
-          color={entry.type === "income"? "rgb(34 197 94)" : "rgb(255 0 0)" }
+          color={entry.type === "Income"? "rgb(34 197 94)" : "rgb(255 0 0)" }
           payment={creditcard}
           mode={entry.type}
           amount={entry.amount}

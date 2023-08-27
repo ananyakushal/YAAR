@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import Delete from "./Delete";
-import Food from "./cutlery.png";
-import Medical from "./medical.png";
-import Transportation from "./transportation.png";
-import Clothing from "./clothing.png";
-import Groceries from "./grocery.png";
-import Party from "./party.png";
+import Food from "../FinanceRecord/categoryIcon/cutlery.png";
+import Medical from "../FinanceRecord/categoryIcon/medical.png";
+import Transportation from "../FinanceRecord/categoryIcon/transportation.png";
+import Clothing from "../FinanceRecord/categoryIcon/clothing.png";
+import Groceries from "../FinanceRecord/categoryIcon/grocery.png";
+import Party from "../FinanceRecord/categoryIcon/party.png";
+import Pocketmoney from "../FinanceRecord/categoryIcon/pocketmoney.png";
+import Cashback from "../FinanceRecord/categoryIcon/cashback.png";
+import Salary from "../FinanceRecord/categoryIcon/salary.png";
 function Entry(props) {
   const [hovered,showDelete]=useState(false);
   const categoryToImage = {
@@ -16,6 +19,9 @@ function Entry(props) {
     Transportation: Transportation,
     Clothing: Clothing,
     Groceries: Groceries,
+    Pocketmoney: Pocketmoney,
+    Cashback: Cashback,
+    Salary: Salary,
     // Add more categories and image URLs here
   };
 
