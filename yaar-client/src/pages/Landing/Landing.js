@@ -11,7 +11,7 @@ import PreLoader from './components/PreLoader';
 
 function Landing({ styles}) { 
   return (
-    <>
+    <div className='ml-4 mr-4' >
     <PreLoader/>
     {/* <styles/> */}
     <Navbar/>
@@ -19,7 +19,7 @@ function Landing({ styles}) {
     <Text2/>
     <Footer/>
     
-    </>
+    </div>
   );
 }
 
