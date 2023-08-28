@@ -12,7 +12,7 @@ const Footer = () => (
           className="w-[266px] h-[72.14px] object-contain"
         />
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-          A new way to keep budget easy, reliable and secure.
+        <b>  A new way to keep budget easy, reliable and secure.</b>
         </p>
       </div>
 
@@ -44,7 +44,7 @@ const Footer = () => (
         Copyright Ⓒ 2023 YAAR. All Rights Reserved.
       </p>
 
-      <div className="flex flex-row md:mt-0 mt-6">
+      <div className="flex flex-row md:mt-0 mt-6 text-blue">
         {socialMedia.map((social, index) => (
           <img
             key={social.id}
