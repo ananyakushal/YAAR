@@ -14,12 +14,15 @@ function Logout({ onLogoutClick }) {
   };
 
   return (
-    <GoogleLogout
-      clientId={clientId}
-      buttonText="Logout"
-      onLogoutSuccess={onSuccess}
-      onLogoutFailure={onFailure}
-    />
+    <div className="h-8 w-16 p-1 sm:h-10 sm:w-20">
+
+      <GoogleLogout
+        clientId={clientId}
+        buttonText="Logout"
+        onLogoutSuccess={onSuccess}
+        onLogoutFailure={onFailure}
+      />
+    </div>
   );
 }
 

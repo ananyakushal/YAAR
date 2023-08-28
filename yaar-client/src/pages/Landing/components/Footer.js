@@ -19,7 +19,7 @@ const Footer = () => (
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
         {footerLinks.map((footerlink) => (
           <div key={footerlink.title} className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}>
-            <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
+            <h4 className="font-poppins font-medium text-[18px] leading-[27px] ">
               {footerlink.title}
             </h4>
             <ul className="list-none mt-4">
@@ -40,7 +40,7 @@ const Footer = () => (
     </div>
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
-      <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
+      <p className="font-poppins font-normal text-center text-[18px] leading-[27px]">
         Copyright Ⓒ 2023 YAAR. All Rights Reserved.
       </p>
 
