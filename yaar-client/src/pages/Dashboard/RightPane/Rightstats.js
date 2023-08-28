@@ -7,8 +7,8 @@ function Rightstats(props) {
         <div className="m-1">Expense So Far : {props.totalExpense}</div>
         <div className="m-1">Income So Far : {props.totalIncome}</div>
         <div className="m-1">Total Balance : {props.totalBalance}</div>
-        <div className="m-1">Contri to pay : {props.totalContriPay}</div>
-        <div className="m-1">Contri to receive : {props.totalContriGet}</div>
+        {/* <div className="m-1">Contri to pay : {props.totalContriPay}</div>
+        <div className="m-1">Contri to receive : {props.totalContriGet}</div> */}
         <div className="m-2 text-lg md:text-3xl">This Month</div>
         <div className="m-1">Income : {props.incomeMonth}</div>
         <div className="m-1">Expense : {props.expenseMonth}</div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 /* @import url(); */
 
-:root {
+[data-theme="light"] {
   --body_background: #fff;
   --body_paper: #fffcfc;
   --text_primary: rgba(0, 0, 0, 0.87);
@@ -12,7 +12,7 @@
   --button_selected: rgba(0, 0, 0, 0.08);
   --button_hover: rgba(0, 0, 0, 0.04);
 }
-[data-theme="dark"] {
+:root {
   --body_background: #121212;
   --body_paper: #181818;
   --text_primary: #fff;

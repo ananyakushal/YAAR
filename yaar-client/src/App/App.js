@@ -10,13 +10,14 @@ import Landing from "../pages/Landing/Landing";
 // import Login from "../pages/Landing/components/Login";
 
 const token =localStorage.token;
+localStorage.setItem("selectedTheme","dark")
 
 function App() {
   return (
     <div className="App overflow-hidden">
-      
+      {token?
       <Dashboard /> :
-      <Landing/>
+      <Landing/>}
     </div>
   );
 }
