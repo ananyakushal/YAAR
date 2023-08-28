@@ -104,11 +104,6 @@
   }
 }
 
-/* .feature-card:hover {
-  background: var(--black-gradient);
-  box-shadow: var(--card-shadow);
-} */
-
 
 .blue__gradient {
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);

@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import Logo from "./Logo.png";
 // import robot from "./robot.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
@@ -13,7 +13,7 @@ import twitter from "./twitter.svg";
 import LandingIcon from "./LandingIcon.png"
 
 export {
-  logo,
+  Logo,
   // robot,
   LandingIcon,
   send,
