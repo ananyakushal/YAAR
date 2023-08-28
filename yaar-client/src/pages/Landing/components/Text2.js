@@ -1,5 +1,5 @@
 import styles from "./style";
-import Button from "./Button";
+// import Button from "./Button";
 
 const Text2 = () => (
   <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}>
