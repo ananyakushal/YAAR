@@ -21,6 +21,9 @@ function Logout({ onLogoutClick }) {
         buttonText="Logout"
         onLogoutSuccess={onSuccess}
         onLogoutFailure={onFailure}
+        icon={false}
+        className="btn rounded-xl h-8 w-18 text-sm sm:p-1 sm:text-lg uppercase text-center sm:h-10 sm:w-20 bg-green-500 hover:bg-green-600"
+        theme="dark"
       />
     </div>
   );
