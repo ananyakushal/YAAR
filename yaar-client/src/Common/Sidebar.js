@@ -9,13 +9,13 @@ const Sidebar = (props) => {
       <div className="profile-picture m-2 flex flex-row justify-center item-start text-sm md:text-lg">
         {/* Placeholder for profile picture */}
         <img
-          className="h-14 m-2 sm:h-16 rounded-full ring-4 ring-offset-[--body_background] ring-offset-4 ring-green-400 "
+          className="h-10 m-2 md:h-16 rounded-full ring-4 ring-offset-[--body_background] ring-offset-4 ring-green-400 "
           src={props.img}
           alt="Profile"
         />
         <h1 className="self-center ml-2">Welcome {props.name} !!</h1>
       </div>
-      <ul className="menu cursor-pointer list-none w-full m-3 text-sm md:text-base">
+      <ul className="menu cursor-pointer list-none w-full m-1 md:m-3 text-xs md:text-lg">
         <NavLink to="/">
           <li>Finance Record</li>
         </NavLink>
