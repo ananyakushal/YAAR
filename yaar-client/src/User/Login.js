@@ -24,7 +24,7 @@ function Login({ onLoginClick }) {
 
   return (
     <div className="btn" onClick={onLoginClick}>
-      <GoogleLogin clientId={clientId} buttonText="Login" onSuccess={onSuccess} onFailure={onFailure} cookiePolicy={"single_host_origin"} isSignedIn={true}/>
+      <GoogleLogin clientId={clientId} buttonText="Login" onSuccess={onSuccess} onFailure={onFailure} cookiePolicy={"single_host_origin"} isSignedIn={true} icon={false} theme="dark"/>
     </div>
   );
 }
