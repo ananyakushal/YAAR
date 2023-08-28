@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import robot from "./robot.png";
+// import robot from "./robot.png";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
 import star from "./Star.svg";
@@ -10,10 +10,12 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
+import LandingIcon from "./LandingIcon.png"
 
 export {
   logo,
-  robot,
+  // robot,
+  LandingIcon,
   send,
   shield,
   star,

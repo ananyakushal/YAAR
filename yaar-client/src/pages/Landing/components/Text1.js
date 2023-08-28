@@ -1,6 +1,6 @@
 import styles from "./style";
-import { robot } from "../assets";
-import GetStarted from "./GetStarted";
+import { LandingIcon } from "../assets";
+// import GetStarted from "./GetStarted";
 
 const Text1 = () => {
   return (
@@ -17,7 +17,7 @@ const Text1 = () => {
             <span className="text-gradient">Generation</span>{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
-            <GetStarted />
+            {/* <GetStarted /> */}
           </div>
         </div>
 
@@ -29,8 +29,8 @@ const Text1 = () => {
         </p>
       </div>
 
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img src={robot} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
+      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-4 relative`}>
+        <img src={LandingIcon} alt="" className="w-[50%] h-[100%] relative z-[5]" />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
@@ -40,7 +40,7 @@ const Text1 = () => {
       </div>
 
       <div className={`ss:hidden ${styles.flexCenter}`}>
-      <GetStarted />
+      {/* <GetStarted /> */}
       </div>
     </section>
   );
