@@ -25,7 +25,7 @@ const Text1 = () => {
           Expense Tracker.
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Our team of uses a methodology to keep your expenses in right track.
+         <b> Our team of uses a methodology to keep your expenses in right track.</b>
         </p>
       </div>
 
