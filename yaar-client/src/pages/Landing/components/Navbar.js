@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { close, Logo, menu } from "../assets/index";
 import { navLinks } from "./icons";
-import Login from "./Login";
+import Login from "../../../User/Login";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
