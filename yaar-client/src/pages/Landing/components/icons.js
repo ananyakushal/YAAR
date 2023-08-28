@@ -5,7 +5,7 @@ import { facebook, instagram, linkedin, twitter, send, shield, star  } from "../
 export const navLinks = [
   {
     id: "home",
-    title: "Home",
+    title: "",
   },
 ];
 
