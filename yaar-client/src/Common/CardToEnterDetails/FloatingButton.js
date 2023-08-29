@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
 import Details from './Details';
 
 const FloatingButton = () => {
