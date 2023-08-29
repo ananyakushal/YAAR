@@ -68,19 +68,19 @@ const Graph = () => {
   console.log(Income);
 
   return (
-    <div className='m-4 flex flex-col justify-center items-center '>
-      <div className='flex flex-row justify-between items-center rounded-lg m-4  bg-[--body_background] '>
-        <div className='flex flex-col p-4 round-lg m-2 bg-[--body_background] '>
+    <div className='flex flex-col w-full justify-center items-center '>
+      <div className='flex w-full flex-row justify-center items-center rounded-lg m-1 p-1 bg-[--body_background] '>
+        <div className='flex flex-col w-1/2 items-center round-lg ml-1 mb-2 bg-[--body_background] '>
           {/*  */}
-          <PieChart width={400} height={400}>
+          <PieChart width={375} height={400}>
             <Pie
               dataKey='amount'
               // isAnimationActive={false}
               data={Expense}
               nameKey='category'
-              cx={200}
+              cx={175}
               cy={200}
-              outerRadius={135}
+              outerRadius={120}
               fill='#8884d8'
               label
             >
@@ -90,18 +90,18 @@ const Graph = () => {
             </Pie>
             <Tooltip />
           </PieChart>
-          <span className="text-center text-3xl">Expenses Overview</span>
+          <span className="text-center text-3xl mb-2">Expenses Overview</span>
         </div>
-        <div className="flex flex-col p-4 round-lg m-4 bg-[--body_background]">
-          <PieChart width={400} height={400}>
+        <div className="flex flex-col w-1/2 items-center round-lg mr-1 mb-2 bg-[--body_background]">
+          <PieChart width={375} height={400}>
             <Pie
               dataKey='amount'
               // isAnimationActive={false}
               data={Income}
               nameKey='category'
-              cx={200}
+              cx={175}
               cy={200}
-              outerRadius={135}
+              outerRadius={120}
               fill='#8884d8'
               label
             >
@@ -111,13 +111,13 @@ const Graph = () => {
             </Pie>
             <Tooltip />
           </PieChart>
-          <span className="text-center text-3xl">Income Overview</span>
+          <span className="text-center text-3xl mb-2">Income Overview</span>
 
         </div>
       </div>
 
-      <div className=''>
-        <BarChart width={800} height={400} data={Expense}>
+      <div className='flex flex-col'>
+        <BarChart width={700} height={400} data={Expense}>
           <CartesianGrid strokeDasharray='3 3' />
           <XAxis dataKey='date' />
           <YAxis />
@@ -128,6 +128,7 @@ const Graph = () => {
           {/* <Bar dataKey="type" fill="#82ca9d" /> */}
           {/* <Bar dataKey={Expense.category} fill='#82ca9d' /> */}
         </BarChart>
+        <span className="text-center text-3xl mb-2">Expense Flow</span>
       </div>
     </div>
   );
