@@ -15,6 +15,9 @@ import {
 
 import axios from "axios";
 import { sortedExpenses } from "../../../../Api/ExpensesApi";
+import { userSortedExpenses } from "../../../../Api/ExpensesApi";
+const id = localStorage.getItem('id');
+// import { userInfo } from "../../../../User/Login";
 
 const COLORS = [
   "rgb(255, 99, 132)", // Red
@@ -40,13 +43,18 @@ const Graph = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await sortedExpenses();
+      const result = await userSortedExpenses(id);
       setExpenses(result.expenses);
     };
     fetchData();
   }, []);
 
-  console.log(expenses);
+  // console.log(expenses);
+  // console.log(userInfo, "userInfo");
+  // console.log(localStorage.getItem('imageUrl'), "imgUrl");
+  // console.log(localStorage.getItem('name'), "name");
+  
+  
   const data = [
     { name: "Category A", value: 50 },
     { name: "Category B", value: 30 },

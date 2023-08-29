@@ -8,10 +8,13 @@ function Navbar() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+    localStorage.removeItem("imageUrl");
     window.location.reload();
-    console.log(localStorage);
+    // console.log(localStorage);
 
-    console.log("Loged Out Successfully");
+    // console.log("Loged Out Successfully");
 
   };
 

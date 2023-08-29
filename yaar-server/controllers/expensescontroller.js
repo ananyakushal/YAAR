@@ -73,6 +73,16 @@ const sortedExpenses = async (req, res) => {
     }
 }
 
+const userSortedExpenses = async (req, res) => {
+    try {
+        const { id: userID } = req.params;
+        const expenses = await Expense.find({id: userID}).sort({date: -1, time: -1});
+        res.status(200).json({ expenses });
+    } catch (error) {
+        res.status(500).json({ msg: error.message });
+    }
+}
+
 
 
 module.exports = {
@@ -81,6 +91,7 @@ module.exports = {
     createExpense,
     updateExpense,
     sortedExpenses,
-    deleteExpense
+    deleteExpense,
+    userSortedExpenses
 }
 
