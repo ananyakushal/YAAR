@@ -20,7 +20,7 @@ const Form1 = () => {
     "Party",
     "Transportation",
   ];
-  const incomeCategory = ["Salary","PocketMoney","Cashback"];
+  const incomeCategory = ["Salary","Pocketmoney","Cashback"];
 
 
   {
