@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const {getAllExpenses, getOneExpense, createExpense, updateExpense, deleteExpense, sortedExpenses} = require('../controllers/expensescontroller');
+const {getAllExpenses, getOneExpense, createExpense, updateExpense, deleteExpense, sortedExpenses, userSortedExpenses} = require('../controllers/expensescontroller');
 
 // Get all expenses
 router.get('/', getAllExpenses);
@@ -21,6 +21,10 @@ router.patch('/:id', updateExpense);
 
 // Delete expense
 router.delete('/:id', deleteExpense);
+
+//userSortedExpenses
+router.get('/user/:id', userSortedExpenses);
+
 
 module.exports = router;
 

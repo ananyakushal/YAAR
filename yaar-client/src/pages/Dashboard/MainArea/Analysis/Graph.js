@@ -16,6 +16,8 @@ import {
 import axios from "axios";
 import { sortedExpenses } from "../../../../Api/ExpensesApi";
 
+// import { userInfo } from "../../../../User/Login";
+
 const COLORS = [
   "rgb(255, 99, 132)", // Red
   "rgb(255, 159, 64)", // Orange
@@ -46,7 +48,12 @@ const Graph = () => {
     fetchData();
   }, []);
 
-  console.log(expenses);
+  // console.log(expenses);
+  // console.log(userInfo, "userInfo");
+  // console.log(localStorage.getItem('imageUrl'), "imgUrl");
+  // console.log(localStorage.getItem('name'), "name");
+  
+  
   const data = [
     { name: "Category A", value: 50 },
     { name: "Category B", value: 30 },
@@ -114,7 +121,6 @@ const Graph = () => {
           <XAxis dataKey='date' />
           <YAxis />
          <Tooltip/>
-      />
           <Legend />
           <Bar dataKey='amount' fill='rgb(248 113 113)' />
           {/* <Bar dataKey="category" fill="#82ca9d" /> */}
