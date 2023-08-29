@@ -15,7 +15,8 @@ import {
 
 import axios from "axios";
 import { sortedExpenses } from "../../../../Api/ExpensesApi";
-
+import { userSortedExpenses } from "../../../../Api/ExpensesApi";
+const id = localStorage.getItem('id');
 // import { userInfo } from "../../../../User/Login";
 
 const COLORS = [
@@ -42,7 +43,7 @@ const Graph = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await sortedExpenses();
+      const result = await userSortedExpenses(id);
       setExpenses(result.expenses);
     };
     fetchData();

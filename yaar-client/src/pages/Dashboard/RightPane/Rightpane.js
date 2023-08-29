@@ -4,16 +4,18 @@ import React from "react";
 import Hamburger from "../Hamburger";
 import Rightstats from "./Rightstats";
 import { useState, useEffect } from "react";
-import { getExpenses } from "../../../Api/ExpensesApi";
+import { userSortedExpenses } from "../../../Api/ExpensesApi";
 
 
 
 
 function Rightpane() {
 
+  const id = localStorage.getItem('id');
+
   const fetchExpenses = async () => {
     try {
-      const response = await getExpenses();
+      const response = await userSortedExpenses(id);
       return response.expenses;
     } catch (error) {
       console.error("Error fetching expenses:", error);
