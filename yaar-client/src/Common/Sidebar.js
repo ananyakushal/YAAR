@@ -15,7 +15,7 @@ const Sidebar = (props) => {
         />
         <h1 className="self-center ml-2">Welcome {props.name} !!</h1>
       </div>
-      <ul className="menu cursor-pointer list-none w-full m-1 md:m-3 text-xs md:text-lg">
+      <ul className="menu cursor-pointer list-none w-full m-1 md:m-3 text-xs md:text-base">
         <NavLink to="/">
           <li>Finance Record</li>
         </NavLink>
