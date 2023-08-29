@@ -2,7 +2,8 @@ import React from "react";
 import "./Sidebar.css"; // Import your CSS file for styling
 import { NavLink } from "react-router-dom";
 const Sidebar = (props) => {
-
+  const img = localStorage.getItem("imageUrl");
+  const userName = localStorage.getItem("name");
 
   return (
     <div className={props.className}>
@@ -10,10 +11,10 @@ const Sidebar = (props) => {
         {/* Placeholder for profile picture */}
         <img
           className="h-10 m-2 md:h-16 rounded-full ring-4 ring-offset-[--body_background] ring-offset-4 ring-green-400 "
-          src={props.img}
+          src={img}
           alt="Profile"
         />
-        <h1 className="self-center ml-2">Welcome {props.name} !!</h1>
+        <h1 className="self-center ml-2">Welcome {userName} !!</h1>
       </div>
       <ul className="menu cursor-pointer list-none w-full m-1 md:m-3 text-xs md:text-lg">
         <NavLink to="/">

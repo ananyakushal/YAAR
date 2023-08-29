@@ -9,14 +9,19 @@ const clientId =
 
 function Login({ onLoginClick }) {
   const onSuccess =(res) =>{
-    console.log("LOGIN SUCCESS! Current user: ",res.profileObj);
+    // console.log("LOGIN SUCCESS! Current user: ",res.profileObj);
     userInfo.name = res.profileObj.name;
     userInfo.email = res.profileObj.email;
     userInfo.imageUrl = res.profileObj.imageUrl;
-    console.log(userInfo);
+    // console.log(userInfo);
     localStorage.setItem("token",res.tokenId);
-    console.log("Token Stored");
-    console.log(localStorage);
+    localStorage.setItem("name",res.profileObj.name);
+    localStorage.setItem("email",res.profileObj.email);
+    localStorage.setItem("imageUrl",res.profileObj.imageUrl);
+    localStorage.setItem("id",res.profileObj.googleId);
+    // console.log("Token Stored");
+    // console.log(localStorage);
+    window.location.reload();
   }
   const onFailure =(res) =>{
     console.log("LOGIN FAILED! res: ",res);

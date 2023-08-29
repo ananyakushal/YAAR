@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const BaseUrl = 'http://localhost:3005/api';
+// const userId = localStorage.getItem('userId');
 
 export const addExpense = async (expenseData) => {
     try {
@@ -38,6 +39,16 @@ export const sortedExpenses = async () => {
         return response.data;
     } catch (error) {
         console.log("Error in sortedExpenses:", error); 
+        throw error;
+    }
+}
+
+export const userSortedExpenses = async (userId) => {
+    try {
+        const response = await axios.get(`${BaseUrl}/expenses/user/${userId}`);
+        return response.data;
+    } catch (error) {
+        console.log("Error in userSortedExpenses:", error); 
         throw error;
     }
 }

@@ -3,7 +3,9 @@ import React from "react";
 import Hamburger from "../Hamburger";
 import { useState } from "react";
 import Sidebar from "../../../Common/Sidebar";
-import profile from "../../../Common/1688118865701.jpeg"
+// import profile from "../../../Common/1688118865701.jpeg"
+// const profile = URL(localStorage.getItem("imageUrl"));
+
 
 function Leftpane() {
   const [view, toView] = useState(false);
@@ -13,9 +15,9 @@ function Leftpane() {
         <Hamburger />
       </button>
       {view ? (
-        <Sidebar name="Yashasvi" img={profile} className="flex flex-col items-center justify-start w-full h-full bg-[--body_background] text-[--text_primary] p-1 pl-3 pr-3" />
+        <Sidebar name="Yashasvi"  className="flex flex-col items-center justify-start w-full h-full bg-[--body_background] text-[--text_primary] p-1 pl-3 pr-3" />
       ) : (
-        <Sidebar name="Yashasvi" img={profile} className="hidden md:flex items-center justify-start flex-col w-full h-full bg-[--body_paper] text-[--text_primary] p-1 pl-3 pr-3" />
+        <Sidebar name="Yashasvi"  className="hidden md:flex items-center justify-start flex-col w-full h-full bg-[--body_paper] text-[--text_primary] p-1 pl-3 pr-3" />
       )}
     </div>
   );

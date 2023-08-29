@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 
 import { addExpense } from "../../Api/ExpensesApi.js";
-
 import "./Card.css";
 const Form1 = () => {
   let dateValue = new Date();
@@ -42,6 +41,7 @@ const Form1 = () => {
   const [date, setDate] = useState(year + "-" + month + "-" + day);
   const [time, setTime] = useState(hour + ":" + minute);
   const [category, setCategory] = useState("");
+  const id = localStorage.getItem("id");
 
   const handleTransactionTypeChange = (event) => {
     setTransactionType(event.target.value);
@@ -73,6 +73,7 @@ const Form1 = () => {
       date,
       time,
       category,
+      id,
     };
 
     try {
