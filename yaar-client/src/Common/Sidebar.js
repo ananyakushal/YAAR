@@ -9,7 +9,7 @@ const Sidebar = (props) => {
     <div className={props.className}>
       <div className="profile-picture m-2 flex flex-row justify-center item-start text-sm md:text-lg">
         {/* Placeholder for profile picture */}
-        <img
+        <img referrerPolicy="no-referrer"
           className="h-10 m-2 md:h-16 rounded-full ring-4 ring-offset-[--body_background] ring-offset-4 ring-green-400 "
           src={img}
           alt="Profile"
