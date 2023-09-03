@@ -17,7 +17,7 @@ function Leftpane() {
       {view ? (
         <Sidebar name="Yashasvi"  className="flex flex-col items-center justify-start w-full h-full bg-[--body_background] text-[--text_primary] p-1 pl-3 pr-3" />
       ) : (
-        <Sidebar name="Yashasvi"  className="hidden md:flex items-center justify-start flex-col w-full h-full bg-[--body_paper] text-[--text_primary] p-1 pl-3 pr-3" />
+        <Sidebar name="Yashasvi"  className="hidden md:flex items-center justify-start rounded-lg flex-col w-full h-full bg-[--body_paper] text-[--text_primary] p-1 pl-3 pr-3" />
       )}
     </div>
   );

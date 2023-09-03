@@ -20,8 +20,7 @@ const Form1 = () => {
     "Party",
     "Transportation",
   ];
-  const incomeCategory = ["Salary","Pocketmoney","Cashback"];
-
+  const incomeCategory = ["Salary", "Pocketmoney", "Cashback"];
 
   {
     day < 10 && (day = "0" + day);
@@ -38,6 +37,7 @@ const Form1 = () => {
 
   const [transactionType, setTransactionType] = useState("Expense");
   const [amount, setAmount] = useState("");
+  const [description, setDescription] = useState("");
   const [date, setDate] = useState(year + "-" + month + "-" + day);
   const [time, setTime] = useState(hour + ":" + minute);
   const [category, setCategory] = useState("");
@@ -47,10 +47,15 @@ const Form1 = () => {
     setTransactionType(event.target.value);
   };
 
-  const categoryToShow = (transactionType === "Expense" ? expenseCategory : incomeCategory)
+  const categoryToShow =
+    transactionType === "Expense" ? expenseCategory : incomeCategory;
 
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
+  };
+
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
   };
 
   const handleDateChange = (event) => {
@@ -149,11 +154,21 @@ const Form1 = () => {
         >
           <option value="">Select a category</option>
           {categoryToShow.map((option, index) => (
-          <option key={index} value={option}>{option}</option>
-        ))}
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
         </select>
       </div>
-
+      <div className="textInputWrapper">
+        <input
+          type="text"
+          value={description}
+          onChange={handleDescriptionChange}
+          placeholder="Description"
+          className="textInput resize overflow-scroll"
+        />
+      </div>
       <button
         type="submit"
         className="submitButton text-center p-2 m-2 bg-green-500 rounded-xl"
