@@ -31,5 +31,4 @@ Features:
 # Maintained By:
 - [Yashasvi Saxena](https://github.com/yashasvisxena) 
 - [Ananya Kushal](https://github.com/ananyakushal) 
-- [Aryan Panwar](https://github.com/chaudharyaryanpanwar) 
 - [Ravi Yadav](https://github.com/TheXro) 
