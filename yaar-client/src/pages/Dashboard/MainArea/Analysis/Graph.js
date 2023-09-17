@@ -109,7 +109,7 @@ const resultIncome = Object.keys(categoryIncome).map((category) => ({
 
   return (
     <div className='flex flex-col w-full justify-center items-center '>
-      <div className='flex w-full md:flex-row flex-col justify-center items-center rounded-lg m-1 p-1 bg-[--body_background] '>
+      <div className='flex w-full lg:flex-row flex-col justify-center items-center rounded-lg m-1 p-1 bg-[--body_background] '>
         <div className='flex flex-col w-1/2 items-center round-lg ml-1 mb-2 bg-[--body_background] '>
           {/*  */}
           <PieChart width={375} height={400}>

@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-lone-blocks */
 
 import React, { useState } from "react";
 
-import { addExpense } from "../../Api/ExpensesApi.js";
+import { addTask } from "../../Api/TasksApi";
 import "./Card.css";
 const Form2 = () => {
   let dateValue = new Date();
@@ -57,7 +58,7 @@ const Form2 = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const transactionData = {
-      task: parseFloat(task),
+      task,
       date,
       time,
       label,
@@ -65,7 +66,7 @@ const Form2 = () => {
     };
 
     try {
-      await addExpense(transactionData);
+      await addTask(transactionData);
       setTask("");
       setDate("");
       setTime("");
@@ -123,7 +124,7 @@ const Form2 = () => {
           ))}
         </select>
       </div>
-      <div className="textInputWrapper">
+      {/* <div className="textInputWrapper">
         <input
           type="text"
           value={description}
@@ -131,7 +132,7 @@ const Form2 = () => {
           placeholder="Description"
           className="textInput resize overflow-scroll"
         />
-      </div>
+      </div> */}
       <button
         type="submit"
         className="submitButton text-center p-2 m-2 bg-green-500 rounded-xl"

@@ -4,7 +4,9 @@ import Work from "../TaskRecord/labelicons/Work.png";
 import Urgent from "../TaskRecord/labelicons/Urgent.png";
 import Reminder from "../TaskRecord/labelicons/Reminder.png";
 import Events from "../TaskRecord/labelicons/Event.png";
+import Delete from "../FinanceRecord/Delete";
 const TaskEntry = (props) => {
+  const [hovered,showDelete]=useState(false);
   const labelToImage = {
     Daily: Daily,
     Work: Work,
@@ -16,10 +18,11 @@ const TaskEntry = (props) => {
 
   const labelImage = labelToImage[props.label];
   return (
-    <div className="TaskEntry cursor-pointer bg-[--body_background] flex m-3 mb-1 mt-1 flex-row w-full rounded-lg">
+    <div onClick={()=>showDelete(!hovered)} className="TaskEntry cursor-pointer bg-[--body_background] flex m-3 mb-1 mt-1 flex-row w-full rounded-lg">
+      {hovered && <Delete onDelete={props.onDelete}/>}
       <img
         className="category h-8 m-2 sm:h-12 self-start"
-        src={Daily} //put "labelImage"
+        src={labelImage} //put "labelImage"
         alt={props.label}
       />
       <div className="Details flex flex-row ml-1 mr-1 pt-1 h-full w-full justify-between">
