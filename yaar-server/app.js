@@ -11,21 +11,19 @@ require('dotenv').config();
 app.use(express.static('./public'));
 app.use(express.json());
 const cors = require('cors');
-// //routes
-// app.get('/api/expenses', (req, res) => {
-//     res.send("Expense Tracker API");
-// }); 
+const tasks = require('./routes/taskRoutes');
 
 app.use(cors()); //allows all origins
 app.use('/api/expenses', expenses);
+app.use('/api/tasks', tasks);
 
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI);
         app.listen(PORT, console.log(`Server is listening on port ${PORT}...`));
     } catch (error) {
-        console.log(error);
+        console.log("error");
     }
 }
 
-start();
+start(); 
