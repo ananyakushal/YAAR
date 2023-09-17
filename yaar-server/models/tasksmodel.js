@@ -18,7 +18,7 @@ const TaskSchema = new mongoose.Schema({
     label:{
         type: String,
         required: [true, 'must provide label'],
-        enum: ["Work","Daily","Urgent","Events", "Reminders""]
+        enum: ["Work","Daily","Urgent","Events", "Reminders"],
     },
     id:{
         type: String,
