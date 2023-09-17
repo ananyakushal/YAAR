@@ -7,7 +7,7 @@ export const addTask = async (Data) => {
         const response = await axios.post(`${BaseUrl}/tasks`, Data);
         return response.data;
     } catch (error) {
-        console.log("error in addExpense", error); 
+        console.log("error in addTask", error); 
         throw error;
     }
 }
