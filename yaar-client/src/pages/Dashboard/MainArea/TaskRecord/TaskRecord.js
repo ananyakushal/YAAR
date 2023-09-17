@@ -15,6 +15,8 @@ function TaskRecord() {
     try {
       const response = await userSortedTask(userId);
       setEntryList(response.tasks);
+      console.log("response.tasks", response.tasks);
+      
     } catch (error) {
       console.log("Error in fetchEntryList:", error);
     }
@@ -35,8 +37,8 @@ function TaskRecord() {
       {/* <TaskEntry  taskname="Workout" label="Daily" date="25/12/23" time="05:00pm" /> */}
       {entryList.map((entry) => (
         <TaskEntry
-          key={entry.id}
-          taskname={entry.name}
+          key={entry._id}
+          taskname={entry.task}
           label={entry.label}
           date={entry.date}
           time={entry.time}

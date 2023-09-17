@@ -63,6 +63,7 @@ const Form2 = () => {
       time,
       label,
       id,
+      description
     };
 
     try {
@@ -124,7 +125,7 @@ const Form2 = () => {
           ))}
         </select>
       </div>
-      {/* <div className="textInputWrapper">
+      <div className="textInputWrapper">
         <input
           type="text"
           value={description}
@@ -132,7 +133,7 @@ const Form2 = () => {
           placeholder="Description"
           className="textInput resize overflow-scroll"
         />
-      </div> */}
+      </div>
       <button
         type="submit"
         className="submitButton text-center p-2 m-2 bg-green-500 rounded-xl"
