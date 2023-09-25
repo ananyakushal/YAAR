@@ -24,10 +24,10 @@ const TaskSchema = new mongoose.Schema({
         type: String,
         required: [true, 'must provide id'],
     },
-    description:{
-        type: String,
-        required: [true, 'must provide description'],
-    },
+    // description:{
+    //     type: String,
+    //     required: [true, 'must provide description'],
+    // },
 });
 
 module.exports = mongoose.model('Task', TaskSchema);
