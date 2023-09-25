@@ -16,6 +16,11 @@ const TaskEntry = (props) => {
     Events: Events,
     // Add more categories and image URLs here
   };
+  const handleDoneEntry = (id) => {
+    document.getElementById(id).classList.toggle("line-through");
+    document.getElementById(id).classList.toggle("opacity-50");
+    document.getElementById(id).classList.toggle("text-[--button_selected]");
+  }
   const labelImage = labelToImage[props.label];
   return (
     <div
@@ -28,7 +33,7 @@ const TaskEntry = (props) => {
         src={labelImage} //put "labelImage"
         alt={props.label}
       />
-      <div id="id" className="Details flex flex-row ml-1 mr-1 pt-1 h-full w-full justify-between">
+      <div id={`${props.id}`} className="Details flex flex-row ml-1 mr-1 pt-1 h-full w-full justify-between">
         <div className="Title-account flex flex-col">
           <div className="Reason text-sm md:text-lg">{props.taskname}</div>
           <div className="Account flex flex-row ">
@@ -48,7 +53,7 @@ const TaskEntry = (props) => {
       </div>
       {hovered && (
         <Done
-          onDone={props.onDone}
+          onClick={handleDoneEntry(props.id)}
         />
       )}
     </div>
