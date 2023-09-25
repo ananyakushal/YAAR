@@ -9,17 +9,17 @@ function Rightstats(props) {
         <div className="m-1">Total Balance : {props.totalBalance}</div>
         {/* <div className="m-1">Contri to pay : {props.totalContriPay}</div>
         <div className="m-1">Contri to receive : {props.totalContriGet}</div> */}
-        <div className="m-2 text-lg md:text-3xl">This Month</div>
+        {/* <div className="m-2 text-lg md:text-3xl">This Month</div>
         <div className="m-1">Income : {props.incomeMonth}</div>
-        <div className="m-1">Expense : {props.expenseMonth}</div>
+        <div className="m-1">Expense : {props.expenseMonth}</div> */}
       </div>
       <hr className="m-3" />
       <div className="Task flex flex-col md:ml-3">
         <div className="m-1">Tasks So Far : {props.totalTasks}</div>
         <div className="m-1">Completed So Far : {props.totalCompleted}</div>
-        <div className="m-2 text-lg md:text-3xl">This Month</div>
+        {/* <div className="m-2 text-lg md:text-3xl">This Month</div>
         <div className="m-1">Tasks Left : {props.tasksMonths}</div>
-        <div className="m-1">Tasks Completed : {props.completedMonths}</div>
+        <div className="m-1">Tasks Completed : {props.completedMonths}</div> */}
       </div>
     </div>
   );

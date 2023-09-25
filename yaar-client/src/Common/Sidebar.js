@@ -23,9 +23,9 @@ const Sidebar = (props) => {
         <NavLink to="/Budget">
           <li>Budget</li>
         </NavLink>
-        <NavLink to="/Categories">
+        {/* <NavLink to="/Categories">
           <li>Categories</li>
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/Analysis">
           <li>Analysis</li>
         </NavLink>

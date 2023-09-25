@@ -30,19 +30,27 @@ function TaskRecord() {
       console.error("Error deleting entry:", error);
     }
   };
+  const handleDoneEntry = () => {
+    document.getElementById("id").classList.toggle("line-through");
+    document.getElementById("img").classList.toggle("opacity-50");
+    document.getElementById("id").classList.toggle("text-[--button_selected]");
+  }
   // setEntryList(entryList);
+
 
   return (
     <div className='Records flex pb-2 mb-2 flex-col items-center justify-start w-full h-full overflow-y-scroll overflow-x-hidden z-0'>
       {/* <TaskEntry  taskname="Workout" label="Daily" date="25/12/23" time="05:00pm" /> */}
-      {entryList.map((entry) => (
+      {entryList.map((entry,index) => (
         <TaskEntry
+          index={index}
           key={entry._id}
           taskname={entry.task}
           label={entry.label}
           date={entry.date}
           time={entry.time}
           onDelete={() => handleDeleteEntry(entry._id)}
+          onDone={() => handleDoneEntry()}
           // Pass other entry properties here
         />
       ))}
