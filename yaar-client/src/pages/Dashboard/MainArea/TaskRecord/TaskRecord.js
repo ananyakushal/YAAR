@@ -30,11 +30,11 @@ function TaskRecord() {
       console.error("Error deleting entry:", error);
     }
   };
-  const handleDoneEntry = () => {
-    document.getElementById("id").classList.toggle("line-through");
-    document.getElementById("img").classList.toggle("opacity-50");
-    document.getElementById("id").classList.toggle("text-[--button_selected]");
-  }
+  // const handleDoneEntry = () => {
+  //   document.getElementById(`${id}}`).classList.toggle("line-through");
+  //   document.getElementById("img").classList.toggle("opacity-50");
+  //   document.getElementById("id").classList.toggle("text-[--button_selected]");
+  // }
   // setEntryList(entryList);
 
 
@@ -50,7 +50,8 @@ function TaskRecord() {
           date={entry.date}
           time={entry.time}
           onDelete={() => handleDeleteEntry(entry._id)}
-          onDone={() => handleDoneEntry()}
+          // onDone={() => handleDoneEntry()}
+          id={entry._id}
           // Pass other entry properties here
         />
       ))}
